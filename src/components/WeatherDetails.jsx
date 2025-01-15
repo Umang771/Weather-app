@@ -7,17 +7,15 @@ const WeatherDetails = (props) => {
   console.log(details);
 
   var [first, setfirst] = useState(details.forecast.forecastday);
-  
 
   const [hour, sethour] = useState(first[0].hour);
-  
 
   return (
     <>
       <div className="container">
         <main className="content">
           <section className="weather-overview">
-            <h2>Today's Weather</h2>
+            <h2 className="head">Today's Weather</h2>
             <div className="weather-summary">
               <div>
                 <h1>{temp}°C</h1>
@@ -53,7 +51,7 @@ const WeatherDetails = (props) => {
                 return (
                   <div key={element.date}>
                     <WeatherForecsat
-                    date={element.date}
+                      date={element.date}
                       min={element.day.mintemp_c}
                       max={element.day.maxtemp_c}
                       desc={element.day.condition.text}
