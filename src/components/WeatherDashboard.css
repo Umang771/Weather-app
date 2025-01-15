@@ -1,0 +1,176 @@
+/* WeatherDashboard.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4d7fa;
+  background-color: #c0f1e3;
+  color: #333;
+}
+
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+    padding: 0 1.5rem;
+  /* padding-right: 1rem; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d142a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius:  8px 8px 0 0;
+}
+
+.header h1{
+  padding-left: 1.5rem;
+}
+
+.container{
+  background-color: #c0f1e3;
+  /* margin:0rem 1rem; */
+}
+
+#root {
+  max-width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.content {
+  padding: 0re 2rem;
+  margin: 2rem 1rem;
+  display: grid;
+  grid-template-areas:
+    "overview aqi"
+    "forecast hourly";
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem 2rem;
+}
+
+.location{
+  background-color: #3d3d3d;
+  color:white;
+  padding: .5rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.weather-overview {
+  grid-area: overview;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow:5px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-summary h1{
+  font-size: 4rem;
+}
+
+.weather-summary{
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=1024x1024&w=is&k=20&c=P68MuQDaXK7NM55yd1ivyrW7NZ2CokCNSfDcXe8BdH0=");
+  color:white
+}
+
+.Aqi {
+  grid-area: aqi;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.good{
+  color:green;
+}
+
+
+.moderate{
+  color:orange;
+}
+
+.harmful{
+  color:red;
+}
+
+
+
+
+.Forecast {
+  grid-area: forecast;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hourly {
+  grid-area: hourly;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tablefor{
+  margin-left: 25%;
+}
+
+.tablehour{
+  margin-left: 15%;
+}
+
+
+
+@media only screen and (max-width: 320px) {
+  .content {
+    padding: 1rem 0;
+    display: block;
+  }
+
+  .weather-overview{
+    margin:1rem 0rem ;
+  }
+
+  .Aqi{
+    margin:1rem 0rem ;
+  }
+
+  .hourly{
+    margin:1rem 0rem ;
+    padding: 5px 0%;
+  }
+
+  .Forecast{
+    margin:1rem 0rem ;
+    padding: 5px 0%;
+  }
+
+  .header{
+    display: block;
+  }
+
+  .header h1{
+    padding: 0rem 1.5rem ;
+  }
+
+  form{
+    display: inline-block;
+  }
+
+  form input{
+    max-width: 50%;
+    padding-top: 5px;
+  }
+  /* .header{
+    width:320px
+  } */
+
+
+}
