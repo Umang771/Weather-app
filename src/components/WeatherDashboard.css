@@ -66,7 +66,7 @@ body {
   border-radius: 8px;
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
   background-image: url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=1024x1024&w=is&k=20&c=P68MuQDaXK7NM55yd1ivyrW7NZ2CokCNSfDcXe8BdH0=");
-  color: white;
+  color: rgb(2, 2, 2);
 }
 
 .weather-summary h1 {
