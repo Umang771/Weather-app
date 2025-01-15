@@ -9,12 +9,10 @@ body {
   color: #333;
 }
 
-
-
 .container {
   width: 100%;
   margin: 0 auto;
-    padding: 0 1.5rem;
+  padding: 0 1.5rem;
   /* padding-right: 1rem; */
 }
 
@@ -25,14 +23,14 @@ body {
   background-color: #0d142a;
   color: #fff;
   padding: 1.5rem;
-  border-radius:  8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
-.header h1{
+.header h1 {
   padding-left: 1.5rem;
 }
 
-.container{
+.container {
   background-color: #c0f1e3;
   /* margin:0rem 1rem; */
 }
@@ -54,10 +52,10 @@ body {
   gap: 2rem 2rem;
 }
 
-.location{
+.location {
   background-color: #3d3d3d;
-  color:white;
-  padding: .5rem;
+  color: white;
+  padding: 0.5rem;
   border-radius: 0 0 8px 8px;
 }
 
@@ -66,18 +64,19 @@ body {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow:5px 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=1024x1024&w=is&k=20&c=P68MuQDaXK7NM55yd1ivyrW7NZ2CokCNSfDcXe8BdH0=");
+  color: white;
 }
 
-.weather-summary h1{
+.weather-summary h1 {
   font-size: 4rem;
 }
 
-.weather-summary{
+
+.weather-summary {
   display: flex;
   justify-content: space-evenly;
-  background-image: url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=1024x1024&w=is&k=20&c=P68MuQDaXK7NM55yd1ivyrW7NZ2CokCNSfDcXe8BdH0=");
-  color:white
 }
 
 .Aqi {
@@ -87,21 +86,15 @@ body {
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-.good{
-  color:green;
+.good {
+  color: green;
 }
-
-
-.moderate{
-  color:orange;
+.moderate {
+  color: orange;
 }
-
-.harmful{
-  color:red;
+.harmful {
+  color: red;
 }
-
-
-
 
 .Forecast {
   grid-area: forecast;
@@ -109,6 +102,9 @@ body {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
+}
+.tablefor {
+  margin-left: 25%;
 }
 
 .hourly {
@@ -118,15 +114,14 @@ body {
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-.tablefor{
-  margin-left: 25%;
+.hourly h4{
+  margin-top: 20px;
 }
 
-.tablehour{
+
+.tablehour {
   margin-left: 15%;
 }
-
-
 
 @media only screen and (max-width: 320px) {
   .content {
@@ -134,43 +129,60 @@ body {
     display: block;
   }
 
-  .weather-overview{
-    margin:1rem 0rem ;
+  .weather-overview {
+    margin: 1rem 0rem;
+    width:120%;
   }
 
-  .Aqi{
-    margin:1rem 0rem ;
+  .weather-summary{
+    display: flex;
+    flex-direction: column;
   }
 
-  .hourly{
-    margin:1rem 0rem ;
+  .Aqi {
+    margin: 1rem 0rem;
+    width:120%
+  }
+
+  .hourly {
+    margin: 1rem 0rem;
     padding: 5px 0%;
+    width:120%
   }
 
-  .Forecast{
-    margin:1rem 0rem ;
+  .tablehour{
+    margin-left: 5%;
+  }
+
+  .Forecast {
+    margin: 1rem 0rem;
     padding: 5px 0%;
+      width:120%
   }
 
-  .header{
+  .tablefor{
+    margin-left: 0%;
+  }
+
+  .header {
     display: block;
   }
 
-  .header h1{
-    padding: 0rem 1.5rem ;
+  .header h1 {
+    padding: 0rem 1.5rem;
   }
 
-  form{
+  form {
     display: inline-block;
   }
 
-  form input{
+  form input {
     max-width: 50%;
     padding-top: 5px;
   }
+
+  
   /* .header{
     width:320px
   } */
-
-
 }
