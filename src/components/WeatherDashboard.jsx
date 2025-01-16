@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WeatherDashboard.css";
 import WeatherDetails from "./WeatherDetails";
+import LoadingBar from 'react-top-loading-bar';
 
 
 const WeatherDashboard = () => {
@@ -5934,6 +5935,7 @@ const WeatherDashboard = () => {
         ]
       }
   });
+  const [progress, setprogress] = useState(0)
 
 
 
@@ -5941,13 +5943,17 @@ const WeatherDashboard = () => {
     const fetchData = async () => {
       let url = `http://api.weatherapi.com/v1/forecast.json?key=fa73bc37d8b843e0b87204633251401&q=${city}&days=7&aqi=yes&alerts=no`;
       let data = await fetch(url);
-      console.log(data)
+      setprogress(30)
       if(data.status==200)
-      {
+      {setprogress(60);
         let parseddata = await data.json();
+        setprogress(90);
         setforecast1(parseddata);
+        setprogress(100);
       }
       else{
+        setprogress(60);
+        setprogress(100);
         alert("Please enter a valid city name")
       }
       // setfirst2(forecast1.forecast.forecastday);
@@ -5992,11 +5998,18 @@ setfirst2(e.target.value)
         {forecast1.location.name},{forecast1.location.country}
       </div>
 
+
       <WeatherDetails
         desc={forecast1.current.condition.text}
         temp={forecast1.current.temp_c}
         details={forecast1}
       />
+      <LoadingBar
+          color='#f11946'
+          height={4}
+          progress={progress}
+          onLoaderFinished={() => setprogress(0)}
+        />
       <div></div>
     </>
   );
