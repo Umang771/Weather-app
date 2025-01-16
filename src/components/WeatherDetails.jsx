@@ -46,7 +46,16 @@ const WeatherDetails = (props) => {
             <h4>
               <b>7-Days Forecast</b>
             </h4>
-            <table className="table tablefor">
+            <table className="table">
+              <thead>
+                <tr>
+                  <div className="headerfor">
+                  <th >Date</th>
+                  <th >High/Low</th>
+                  <th >Description</th>
+                  </div>
+                </tr>
+              </thead>
               {first.map((element) => {
                 return (
                   <div key={element.date}>
@@ -67,6 +76,15 @@ const WeatherDetails = (props) => {
               <b>Hourly Forecast</b>
             </h4>
             <table className="table tablehour">
+            <thead>
+                <tr>
+                  <div className="hourfor">
+                  <th >Date/Time</th>
+                  <th >Temp</th>
+                  <th >Wind</th>
+                  </div>
+                </tr>
+              </thead>
               {hour.map((element) => {
                 return (
                   <div key={element.time}>
