@@ -11,8 +11,9 @@ body {
 
 .container {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin: 0rem 0% 0% 8%;
+  padding-left: 0%;
+  /* padding: 0 1.5rem; */
   /* padding-right: 1rem; */
 }
 
@@ -36,19 +37,19 @@ body {
 }
 
 #root {
-  max-width: 100%;
+  max-width: 120%;
   margin: 0%;
   padding: 0%;
 }
 
 .content {
-  padding: 0re 2rem;
-  margin: 2rem 1rem;
+  /* padding: 0re 2rem; */
+  margin: 2rem .5rem;
   display: grid;
   grid-template-areas:
     "overview aqi"
     "forecast hourly";
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns:1fr;
   gap: 2rem 2rem;
 }
 
@@ -103,9 +104,30 @@ body {
   padding: 20px;
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
 }
-.tablefor {
-  margin-left: 25%;
+.tdfor {
+  width:50rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+.headerfor {
+  width:50rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  th{
+    padding-left: 50px;
+  }
+}
+.hourfor {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  th{
+    padding-left: 20px;
+  }
+}
+
 
 .hourly {
   grid-area: hourly;
@@ -118,10 +140,6 @@ body {
   margin-top: 20px;
 }
 
-
-.tablehour {
-  margin-left: 15%;
-}
 
 @media only screen and (max-width: 320px) {
   .content {
