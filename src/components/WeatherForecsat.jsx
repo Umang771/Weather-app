@@ -7,11 +7,13 @@ const WeatherForecsat = (props) => {
     <div>
       <tbody>
         <tr>
+          <div className="tdfor">
           <td>{date}</td>
           <td>
             {max}°C/{min}°C
           </td>
           <td>{desc}</td>
+          </div>
         </tr>
       </tbody>
     </div>
